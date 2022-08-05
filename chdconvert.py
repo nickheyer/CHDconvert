@@ -22,19 +22,20 @@ for x in incoming_files:
     extracted_files = [f for f in os.listdir(out) if f.split(".")[-1] in ["iso", "cue"]] #only isos or cues
     for i in extracted_files:
         if operator in ["-r", "--replace"]:
-            os.remove(os.path.join(input_dir, x))
+            p = os.path.join(input_dir, x)
+            os.remove(p)
+            print(f"{p} removed after unarchiving.")
             output_dir = input_dir
         else:
             output_dir = os.path.join(input_dir + "_out")
         if os.path.exists(output_dir) == False:
             os.mkdir(output_dir)
-        cmd = " ".join([chdman, "createcd", "-f", "-i", f'\"{os.path.join(tmp_dir, out, i)}\"', "-o", f'"{output_dir}\\{i.split(".")[0]+".chd"}"'])
+        out_path = f'"{os.path.join(output_dir, ".".join(i.split(".")[:-1]))}.chd"'
+        cmd = " ".join([chdman, "createcd", "-f", "-i", f'\"{os.path.join(tmp_dir, out, i)}\"', "-o", out_path])
         print("COMMAND: " + cmd)
         subprocess.call(cmd)
         print(f"{i} has been converted to chd.")
 
 if operator:
     shutil.rmtree(tmp_dir)
-    
-
     
