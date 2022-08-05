@@ -36,3 +36,6 @@ Examples:
   python.exe .\chdconvert.py C:\Where\the\7zip\files\live --delete
   ```
   Same as above, except it deletes the intermediary "folder_tmp" directory
+
+# Shoutouts
+Thanks CHDMAN! 
