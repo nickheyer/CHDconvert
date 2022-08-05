@@ -16,7 +16,9 @@ for x in incoming_files:
     out = os.path.join(tmp_dir, x.split(".")[0])
     if os.path.exists(out) == False:
         os.mkdir(out)
-    Archive(os.path.join(input_dir, x)).extractall(out)
+    inp = os.path.join(input_dir, x)
+    print(f"Unarchiving {inp}")
+    Archive(inp).extractall(out)
     print(f"{x} has been unarchived.")
 
     extracted_files = [f for f in os.listdir(out) if f.split(".")[-1] in ["iso", "cue"]] #only isos or cues
