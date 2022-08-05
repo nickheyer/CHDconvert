@@ -10,9 +10,10 @@ chdman = os.path.join(os.path.dirname(__file__),'chdman.exe')
 operator = sys.argv[2] if (len(sys.argv) == 3 and sys.argv[2] in ["-d", "--delete", "-r", "--replace"]) else None
 
 incoming_files = [f for f in os.listdir(input_dir) if f.split(".")[-1] == "7z"] #only 7z files in that dir
-if os.path.exists(tmp_dir) == False:
-        os.mkdir(tmp_dir)
+
 for x in incoming_files:
+    if os.path.exists(tmp_dir) == False:
+        os.mkdir(tmp_dir)
     out = os.path.join(tmp_dir, x.split(".")[0])
     if os.path.exists(out) == False:
         os.mkdir(out)
