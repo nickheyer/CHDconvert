@@ -25,7 +25,6 @@ for x in incoming_files:
         if os.path.exists(output_dir) == False:
             os.mkdir(output_dir)
         cmd = " ".join([chdman, "createcd", "-f", "-i", f'\"{os.path.join(tmp_dir, out, i)}\"', "-o", f'"{output_dir}\\{i.split(".")[0]+".chd"}"'])
-        print("COMMAND: " + cmd)
         subprocess.call(cmd)
         print(f"{i} has been converted to chd.")
 
