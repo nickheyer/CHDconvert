@@ -1,6 +1,9 @@
 # CHDconvert
 Converts directories containing ".7z" files into ".chd" files, usually for purposes of console emulation.
 
+# Requirements
+[`Python`](https://www.python.org/downloads/)
+
 # Installation
 
 Clone CHDconvert
