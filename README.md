@@ -34,11 +34,17 @@ Examples:
   ```
   Does the same as the above
 
-- Provide the delete arg
+- Provide the delete arg ("-d" or "--delete")
   ```
   python.exe .\chdconvert.py C:\Where\the\7zip\files\live --delete
   ```
   Same as above, except it deletes the intermediary "folder_tmp" directory
+
+- Provide the replace arg ("-r" or "--replace")
+  ```
+  python.exe .\chdconvert.py C:\Where\the\7zip\files\live --replace
+  ```
+  Replaces the 7zip file, deleting the original as well as the intermediary files in "folder_tmp"
 
 # Shoutouts
 Thanks CHDMAN! 
