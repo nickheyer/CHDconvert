@@ -37,7 +37,7 @@ for x in incoming_files:
         print("COMMAND: " + cmd)
         subprocess.call(cmd)
         print(f"{i} has been converted to chd.")
-
-        if operator:
-            shutil.rmtree(tmp_dir)
+    
+    if operator:
+        shutil.rmtree(tmp_dir)
     
