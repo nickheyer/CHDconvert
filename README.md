@@ -6,16 +6,30 @@ Converts a directory containing ".gz" and ".7z" files into a directory containin
 [`Git`](https://git-scm.com/download/win) 
 
 # Installation
+Please select either Method A or Method B to install CHDconvert.
 
-Clone CHDconvert
+### Method A: Download Release
 ```
-git clone https://github.com/nickheyer/CHDconvert
+https://github.com/uqKami/CHDconvert/releases/latest
 ```
-Change Directory to where you cloned repo (in previous step)
+Unzip CHDconvert.7z and change directory to where you unzipped
+```
+cd C:\Where\you\unzipped\the\release
+```
+Install requirements
+```
+pip install -r requirements.txt
+```
+
+### Method B: Clone CHDconvert
+```
+git clone https://github.com/uqKami/CHDconvert
+```
+Change directory to where you cloned repo (in previous step)
 ```
 cd C:\Where\you\cloned\this\repo
 ```
-Install Requirements
+Install requirements
 ```
 pip install -r requirements.txt
 ```
