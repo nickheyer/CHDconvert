@@ -8,7 +8,20 @@ Converts a directory containing ".gz" and ".7z" files into a directory containin
 # Installation
 Please select either Method A or Method B to install CHDconvert.
 
-### Method A: Download Release
+### Method A: Clone CHDconvert
+```
+git clone https://github.com/nickheyer/CHDconvert
+```
+Change directory to where you cloned repo (in previous step)
+```
+cd C:\Where\you\cloned\this\repo
+```
+Install requirements
+```
+pip install -r requirements.txt
+```
+
+### Method B: Download Release
 ```
 https://github.com/uqKami/CHDconvert/releases/latest
 ```
@@ -21,18 +34,7 @@ Install requirements
 pip install -r requirements.txt
 ```
 
-### Method B: Clone CHDconvert
-```
-git clone https://github.com/uqKami/CHDconvert
-```
-Change directory to where you cloned repo (in previous step)
-```
-cd C:\Where\you\cloned\this\repo
-```
-Install requirements
-```
-pip install -r requirements.txt
-```
+
 
 # Usage
 Examples:
