@@ -34,6 +34,12 @@ Install requirements
 pip install -r requirements.txt
 ```
 
+# Linux Additionals
+Use your distro's package/download manager to get mame-tools.
+eg. Debian-variants using apt
+```
+sudo apt install mame-tools
+```
 
 
 # Usage
