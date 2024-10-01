@@ -6,12 +6,15 @@ import shutil
 
 input_dir = input("Input Dir:\n") if len(sys.argv) < 2 else sys.argv[1]
 tmp_dir = input_dir + "_tmp"
-chdman = os.path.join(os.path.dirname(__file__), 'chdman.exe')
+if os.name == 'nt':
+    chdman = os.path.join(os.path.dirname(__file__), 'chdman.exe')
+else:
+    chdman = 'chdman'
 operator = sys.argv[2] if (len(sys.argv) == 3 and sys.argv[2] in ["-d", "--delete", "-r", "--replace"]) else None
 error_log_file = "skipped_archives.txt"
 
 # Updated to handle both gz and 7z files
-incoming_files = [f for f in os.listdir(input_dir) if f.split(".")[-1] in ["gz", "7z"]]  
+incoming_files = [f for f in os.listdir(input_dir) if f.split(".")[-1] in ["gz", "7z", "zip"]]  # Support additional archives, eg. zip
 for x in incoming_files:
     try:
         if not os.path.exists(tmp_dir):
@@ -39,7 +42,7 @@ for x in incoming_files:
             out_path = f'"{os.path.join(output_dir, archive_name)}.chd"' # Use archive name for CHD file  
             cmd = " ".join([chdman, "createcd", "-f", "-i", f'\"{os.path.join(tmp_dir, out, i)}\"', "-o", out_path])
             print("COMMAND: " + cmd)
-            subprocess.call(cmd)
+            subprocess.call(cmd, shell=True) # Linux: by default subprocess.call doesn't use a shell to run commands
             print(f"{i} has been converted to chd.")
 
         if operator:
