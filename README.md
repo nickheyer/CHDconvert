@@ -48,25 +48,25 @@ Examples:
 
 - Simply run it, and provide the folder path when it asks for it.
   ```
-  python.exe .\chdconvert.py
+  python .\chdconvert.py
   ```
   Converts every .7z file in given path to chd. Extracts first, outputs to folder name + "_tmp", then converts and output to folder     name + "_out"
   
 - Provide a folder path as an arg
   ```
-  python.exe .\chdconvert.py C:\Where\the\7zip\files\live
+  python .\chdconvert.py C:\Where\the\7zip\files\live
   ```
   Does the same as the above
 
 - Provide the delete arg ("-d" or "--delete")
   ```
-  python.exe .\chdconvert.py C:\Where\the\7zip\files\live --delete
+  python .\chdconvert.py C:\Where\the\7zip\files\live --delete
   ```
   Same as above, except it deletes the intermediary "folder_tmp" directory
 
 - Provide the replace arg ("-r" or "--replace")
   ```
-  python.exe .\chdconvert.py C:\Where\the\7zip\files\live --replace
+  python .\chdconvert.py C:\Where\the\7zip\files\live --replace
   ```
   Replaces the 7zip file, deleting the original as well as the intermediary files in "folder_tmp"
 
