@@ -35,7 +35,8 @@ pip install -r requirements.txt
 ```
 
 # Linux Additionals
-Use your distro's package/download manager to get mame-tools.
+Some Linux distributions can give you chdman via aptitude with the mame-tools package.
+Use your distro's package/download manager to get mame-tools (for chdman).
 eg. Debian-variants using apt
 ```
 sudo apt install mame-tools
