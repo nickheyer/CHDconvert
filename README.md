@@ -1,5 +1,5 @@
 # CHDconvert
-Converts a directory containing ".gz" and ".7z" files into a directory containing ".chd" files, usually for purposes of console emulation.
+Converts a directory containing ".gz", ".7z" and ".zip" files into a directory containing ".chd" files, usually for purposes of console emulation.
 
 # Requirements (Included with Linux/Mac)
 [`Python`](https://www.python.org/downloads/)\
